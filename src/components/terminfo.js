@@ -11,7 +11,8 @@ const TermInfo = props => (
         <div>
             <GeneralTerms 
                 multipleLoanLengths={faq.multipleLoanLengths}
-                multipleLoanTypes={faq.multipleLoanTypes}
+                interestOnly={faq.interestOnly}
+                immediateRepayment={faq.immediateRepayment}
                 interestRate36={schoolInfo.interestRate36}
                 interestRate60={schoolInfo.interestRate60}
                 IOAPR36={schoolInfo.interestOnly[0].APR36}
@@ -22,7 +23,7 @@ const TermInfo = props => (
                 APRRange60={schoolInfo.APRRange60}
             />
 
-            {schoolInfo.interestOnly.map(school => {
+            {faq.interestOnly && schoolInfo.interestOnly.map(school => {
                 return <InterestOnlyTerms
                 programName={school.programName} 
                 loanExampleAmt={school.LoanExampleAmt}
@@ -41,7 +42,7 @@ const TermInfo = props => (
             />
             })}
 
-            {faq.multipleLoanTypes && schoolInfo.immediateRepayment.map(school => {
+            {faq.immediateRepayment && schoolInfo.immediateRepayment.map(school => {
                 return <ImmRepaymentTerms
                 programName={school.programName} 
                 loanExampleAmt={school.LoanExampleAmt}

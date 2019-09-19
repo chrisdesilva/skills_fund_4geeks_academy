@@ -18,7 +18,7 @@ const LoanCalculator = () => {
     const minLoanAmt = 2000
     const [interestPayment, setInterestPayment] = useState({ payment36: null, payment60: null })
     const [monthlyPayment, setMonthlyPayment] = useState({ payment36: null, payment60: null })
-    const [loanType, setLoanType] = useState('0') // default to 0 for interest-only, 1 for immediate repayment
+    const [loanType, setLoanType] = useState('1') // default to 0 for interest-only, 1 for immediate repayment
     const [multiMetros, showMetros] = useState(programLoanInfo[0].showMetros) // shows metro dropdown
     const [loanTypes, showLoanTypes] = useState(programLoanInfo[0].showLoanTypes) // shows IR/IO dropdown
     const [metros, setMetros] = useState(programLoanInfo[0].locations) || useState(null)

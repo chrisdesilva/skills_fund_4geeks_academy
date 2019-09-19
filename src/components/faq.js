@@ -66,7 +66,9 @@ const FAQ = () => {
                     {faq.immediateRepayment && <p className="mb-0 pb-4"><strong>Immediate Repayment Loans: </strong>These loans have no deferment period. You will start making full monthly payments (interest plus principal) roughly one month after your loan is disbursed to your school. Disbursement occurs on the second Wednesday after program start.</p>}
                </Collapse>
           
-          <div onClick={() => showq5(!q5)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>how much are interest payments during the deferment period?</h3></div>
+          {faq.interestOnly &&
+               <>
+               <div onClick={() => showq5(!q5)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>how much are interest payments during the deferment period?</h3></div>
                <Collapse isOpened={q5} springConfig={{stiffness: 150, damping: 30}}>
                     <p>The interest-only payments depend on how much you borrow; the less you borrow, the less you will pay.</p>
                     <p><strong>For a 36-month {faq.exampleLoanAmount} loan:</strong> The interest rate is fixed at {faq.interestRate36} / {faq.APR36} estimated APR. The interest-only monthly payment is approximately {faq.IOPayment36}.</p>
@@ -74,6 +76,8 @@ const FAQ = () => {
                     <p>Please see terms in "Term Details" above.</p>
                     <p className="mb-0 pb-4"><strong>Please note:</strong> The Annual Percentage Rate (APR) is estimated and may change slightly based on the loan type, origination fee, and approximate program length. To learn how an Annual Percentage Rate (APR) is calculated, <a className="text-primary" target="_blank" href="https://skills.fund/resources/how-is-an-apr-calculated" rel="noreferrer noopener">visit our blog.</a></p>
                </Collapse>
+               </>
+          }
 
           <div onClick={() => showq6(!q6)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>will i get charged any fees for taking out this loan?</h3></div>
                <Collapse isOpened={q6} springConfig={{stiffness: 150, damping: 30}}>

@@ -86,32 +86,38 @@ const GeneralTerms = props => (
                         <td className="text-center font-bold bg-gray-100">Capitalization of Interest</td>
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Interest not capitalized unless payments not made.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Interest not capitalized unless payments not made.</span>}</td> 
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Interest not capitalized unless payments not made.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Interest not capitalized unless payments not made.</p>}</td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Payments Required While Enrolled?</td> 
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Monthly interest payments are required.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Yes, full payments (interest + principal) are mandatory roughly one month after loan is disbursed.</span>}</td>
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Monthly interest payments are required.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Yes, full payments (interest + principal) are mandatory roughly one month after loan is disbursed.</p>}</td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Grace Period</td>
                     </tr>
                     <tr>
-                        <td className="text-center">Two-month period after the in-school period, following official program completion, and before interest and principal repayment begins. (3)<br /><br />
-                        <strong>Interest-Only Loans:</strong> Interest-only payments are required while in school and in the grace period.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> None, full repayments start roughly one month after loan is disbursed.</span>}</td> 
+                        <td className="text-center">
+                            <p>Two-month period after the in-school period, following official program completion, and before interest and principal repayment begins. (3)</p>
+                            {props.interestOnly && <p><strong>Interest-Only Loans:</strong> Interest-only payments are required while in school and in the grace period.</p>}
+                            {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> None, full repayments start roughly one month after loan is disbursed.</p>}
+                        </td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Post-Grace Period</td>
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Full repayments (principal and interest) are required.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Full repayments (principal and interest) are required.</span>}</td> 
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Full repayments (principal and interest) are required.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Full repayments (principal and interest) are required.</p>}</td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Principal and Interest Repayment Term</td> 
                     </tr>
                     <tr>
-                        <td className="text-center">36 months (3 years)</td> 
+                        <td className="text-center ">36 months (3 years)</td> 
                     </tr>
                     {props.multipleLoanLengths &&
                     <>
@@ -140,26 +146,31 @@ const GeneralTerms = props => (
                         <td className="text-center font-bold bg-gray-100">Capitalization of Interest</td>
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Interest not capitalized unless payments not made.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Interest not capitalized unless payments not made.</span>}</td> 
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Interest not capitalized unless payments not made.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Interest not capitalized unless payments not made.</p>}</td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Payments Required While Enrolled?</td>
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Monthly interest payments are required.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Yes, full payments (interest + principal) are mandatory roughly one month after loan is disbursed.</span>}</td> 
-                    </tr>
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Monthly interest payments are required.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Yes, full payments (interest + principal) are mandatory roughly one month after loan is disbursed.</p>}</td>                    </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Grace Period</td>
                     </tr>
                     <tr>
-                        <td className="text-center">Two-month period after the in-school period, following official program completion, and before interest and principal repayment begins. (3)<br /><br />
-                        <strong>Interest-Only Loans:</strong> Interest-only payments are required while in school and in the grace period.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> None, full repayments start roughly one month after loan is disbursed.</span>}</td> 
+                    <td className="text-center">
+                            <p>Two-month period after the in-school period, following official program completion, and before interest and principal repayment begins. (3)</p>
+                            {props.interestOnly && <p><strong>Interest-Only Loans:</strong> Interest-only payments are required while in school and in the grace period.</p>}
+                            {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> None, full repayments start roughly one month after loan is disbursed.</p>}
+                        </td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Post-Grace Period</td>
                     </tr>
                     <tr>
-                        <td className="text-center"><strong>Interest-Only Loans:</strong> Full repayments (principal and interest) are required.{props.multipleLoanTypes && <span><br/><br/><strong>Immediate Repayment Loans:</strong> Full repayments (principal and interest) are required.</span>}</td> 
+                        <td className="text-center">{props.interestOnly && <p><strong>Interest-Only Loans:</strong> Full repayments (principal and interest) are required.</p>}
+                        {props.immediateRepayment && <p><strong>Immediate Repayment Loans:</strong> Full repayments (principal and interest) are required.</p>}</td>
                     </tr>
                     <tr>
                         <td className="text-center font-bold bg-gray-100">Principal and Interest Repayment Term</td>

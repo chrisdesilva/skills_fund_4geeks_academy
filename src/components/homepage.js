@@ -17,6 +17,7 @@ import FAQ from './faq'
 import Eligibility from './eligibility'
 import ContactForm from './contactform'
 import { applicationsLive } from '../constants/programInfo'
+import Reviews from './reviews'
 
 
 class Homepage extends React.Component {
@@ -127,6 +128,7 @@ class Homepage extends React.Component {
                 schoolName={this.props.schoolName}
               />
             }
+            <Reviews />
             <LeadCaptureForm 
               IP={this.props.IP}
               pageUri={this.props.pageUri}

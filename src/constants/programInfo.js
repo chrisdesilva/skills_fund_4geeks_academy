@@ -70,13 +70,13 @@ export const faq = { // faq section
     loanRange: [
         {
             programName: "4Geeks Academy's Full Stack Software Development (Part-Time)",
-            maxAmount: "$6,999",
+            maxAmount: "$7,499",
             col: false,
             colAmount: "$6,000"
         },
         {
             programName: "4Geeks Academy's Full Stack Software Development (Full-Time)",
-            maxAmount: "$9,000",
+            maxAmount: "$9,499",
             col: true,
             colAmount: "$3,000"
         },
@@ -137,7 +137,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
         name: "Full-Time Software Development",
         url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SK4GFS19",
         loanInfo: { // match loanInfo in first metro below
-            maxLoanAmt: 12000,
+            maxLoanAmt: 12499,
             loanTerm36: true,
             loanTerm60: true,
             '0': null,
@@ -154,7 +154,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
           {
             location: "Metro 1",
             loanInfo: { // // match loanInfo to Program 1 above
-              maxLoanAmt: 12000,
+              maxLoanAmt: 12499,
               loanTerm36: true,
               loanTerm60: true,
               '0': null,
@@ -198,7 +198,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
         name: "Part-Time Software Development",
         url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SK4G18",
         loanInfo: { // match loanInfo in first metro below
-            maxLoanAmt: 6999,
+            maxLoanAmt: 7499,
             loanTerm36: true,
             loanTerm60: true,
             '0': null,
@@ -215,7 +215,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
             {
               location: "Metro 1",
               loanInfo: { // match loanInfo to Program 2 loanInfo above
-                maxLoanAmt: 6999,
+                maxLoanAmt: 7499,
                 loanTerm36: true,
                 loanTerm60: true,
                 '0': null,
@@ -244,7 +244,7 @@ export const programLoanInfo = [ // update with program names and corresponding 
 ]
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
-export const programMaxText = "Choose the loan amount that works best for you. Borrow up to $9,000 for tuition and up to $3,000 for cost of living for the Full-Time Full-Stack Software Development program and up to $6,999 for tuition for the Part-Time Full-Stack Software Devlelopment program."
+export const programMaxText = "Choose the loan amount that works best for you. Borrow up to $9,499 for tuition and up to $3,000 for cost of living for the Full-Time Full-Stack Software Development program and up to $7,499 for tuition for the Part-Time Full-Stack Software Devlelopment program."
 
 export const paymentTable = {
     headers: ["Program", "Tuition", "Cost of Living", "Max Total"],

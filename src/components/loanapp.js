@@ -282,7 +282,7 @@ const LoanApp = React.forwardRef((props, ref) => {
             <p>Consent to share data:</p>
             <p>
               By clicking the box below and beginning the application, I consent
-              under Federal and state privacy laws to ${props.schoolName}{" "}
+              under Federal and state privacy laws to {props.schoolName}{" "}
               providing to Skills Fund information related to my application,
               enrollment, and completion, including but not limited to
               information contained in my original application and supplements
